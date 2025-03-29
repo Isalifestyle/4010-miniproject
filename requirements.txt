@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+requests
+fpdf
+streamlit
+beautifulsoup4
+google-search-results
