@@ -20,10 +20,14 @@ class Query(BaseModel):
 async def generate_report(request: Query):
     try:
         questions = generate_questions(request.query)
+        print('test')
         data = gather_data(questions)
+        print('test')
         analysis = analyze_data(data)
+        print('test')
         content_store["preview"] = analysis
         report_path = generate_pdf(request.query, analysis)
+        print('test')
         return {"url": report_path}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

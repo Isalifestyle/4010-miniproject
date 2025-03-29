@@ -1,7 +1,8 @@
 import requests
 import time
 # Directly include your Groq API key here
-GROQ_API_KEY = "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"
+# GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 
 
 def call_groq_api(text, topic):
@@ -39,7 +40,7 @@ def call_groq_api(text, topic):
         response = requests.post(
             "https://api.groq.com/openai/v1/chat/completions",
             json={
-                "model": "llama3-groq-70b-8192-tool-use-preview",
+                "model": "llama3-70b-8192",
                 "messages": [
                     {"role": "user", "content": prompt}
                 ]
